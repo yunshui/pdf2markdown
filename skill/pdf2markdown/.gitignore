@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs and output
+logs/
+output/
+*.pdf
+
+# Configuration with sensitive data
+config.json
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Test
+.pytest_cache/
+.coverage
+
+# Temporary
+*.tmp
+*.log

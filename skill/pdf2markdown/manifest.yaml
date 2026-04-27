@@ -1,0 +1,57 @@
+name: pdf2markdown
+version: 1.0.0
+description: Convert PDF files to Markdown format using LLM
+author: pdf2markdown
+license: MIT
+tags:
+  - pdf
+  - markdown
+  - converter
+  - llm
+  - ocr
+
+runtime:
+  type: python
+  version: "3.10+"
+
+entrypoint:
+  script: main.py
+  type: python
+
+dependencies:
+  - pymupdf>=1.23.0,<2.0.0
+  - requests>=2.31.0,<3.0.0
+  - pillow>=10.0.0,<11.0.0
+
+environment:
+  variables:
+    - name: PDF2MD_API_URL
+      description: API URL for LLM model
+      optional: true
+    - name: PDF2MD_API_KEY
+      description: API key for LLM model
+      optional: true
+      sensitive: true
+
+config:
+  model:
+    name: qwen3.5-plus
+    api_url: https://coding.dashscope.aliyuncs.com/v1/chat/completions
+    timeout: 120
+  conversion:
+    max_retries: 3
+    dpi: 200
+
+inputs:
+  - name: pdf_path
+    type: file
+    description: Path to the PDF file to convert
+    required: true
+
+outputs:
+  - name: markdown_path
+    type: file
+    description: Path to the generated Markdown file(s)
+  - name: summary
+    type: text
+    description: Conversion summary

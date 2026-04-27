@@ -1,0 +1,17 @@
+{
+  "model": {
+    "name": "qwen3.5-plus",
+    "api_url": "https://coding.dashscope.aliyuncs.com/v1/chat/completions",
+    "api_key": "",
+    "timeout": 120
+  },
+  "conversion": {
+    "max_retries": 3,
+    "single_page_prompt": "请将这个PDF页面转换为Markdown格式，保持原有的结构和格式。如果页面包含表格，请使用Markdown表格格式。如果页面包含公式，请使用LaTeX格式。",
+    "multi_page_summary_prompt": "请为这个页面生成一个简短的摘要（不超过100字），描述页面的主要内容。"
+  },
+  "paths": {
+    "output_dir": "output",
+    "logs_dir": "logs"
+  }
+}
