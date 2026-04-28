@@ -1,0 +1,17 @@
+{
+  "model": {
+    "name": "qwen3.5-plus",
+    "api_url": "https://coding.dashscope.aliyuncs.com/v1/chat/completions",
+    "api_key": "",
+    "timeout": 120
+  },
+  "conversion": {
+    "max_retries": 3,
+    "single_page_prompt": "请将这张图片中的内容转换为Markdown格式，保持原有的格式和结构。",
+    "multi_page_summary_prompt": "请总结这张图片中的关键信息，用简短的中文描述。"
+  },
+  "paths": {
+    "output_dir": "output",
+    "logs_dir": "logs"
+  }
+}

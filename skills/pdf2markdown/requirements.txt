@@ -1,0 +1,13 @@
+# PDF to Markdown Converter Dependencies
+
+# PDF processing
+PyMuPDF==1.23.26
+
+# HTTP requests
+requests==2.31.0
+
+# Image processing
+Pillow==10.3.0
+
+# Progress bars
+tqdm==4.66.4
