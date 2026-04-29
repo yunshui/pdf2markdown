@@ -14,7 +14,10 @@
 - ⚙️ **灵活配置** - 支持JSON配置文件和命令行参数
 - 🎯 **格式保持** - 尽量保持原PDF的格式和结构
 - 🔍 **页面摘要** - 多页PDF自动生成中文页面摘要
-- 🚀 **简单易用** - 一条命令完成转换
+- 💾 **断点续传** - 支持中断后恢复，跳过已完成页面
+- 🚀 **离线安装** - 支持 Windows 离线环境安装
+- 🔌 **OpenClaw技能** - 可作为独立技能使用
+- 🎮 **简单易用** - 一条命令完成转换
 
 ## 📦 安装
 
@@ -243,6 +246,58 @@ pdf2markdown/
 ├── README.md                   # 本文档
 └── README_EN.md                # 英文文档
 ```
+
+## 🔌 OpenClaw 技能
+
+项目包含完整的 OpenClaw 技能，可在 Windows 环境中离线使用。
+
+### 技能目录
+
+```
+skills/pdf2markdown/
+├── pdf2md.py                   # 技能入口
+├── conf/setting.json           # 配置文件
+├── install-offline.bat         # Windows离线安装脚本
+├── install-offline.md          # 离线安装文档
+├── packages-windows/           # Windows依赖包
+└── src/                        # 源代码
+```
+
+### 在线使用
+
+```bash
+# 进入技能目录
+cd skills/pdf2markdown
+
+# 设置API密钥
+export PDF2MD_API_KEY="your-api-key"
+
+# 运行转换
+python pdf2md.py document.pdf
+```
+
+### Windows 离线安装
+
+```cmd
+# 进入技能目录
+cd skills\pdf2markdown
+
+# 运行离线安装
+install-offline.bat
+
+# 使用技能
+python pdf2md.py document.pdf --api-key YOUR_API_KEY
+```
+
+### 离线安装说明
+
+详细信息请参考 [离线安装文档](skills/pdf2markdown/install-offline.md)
+
+**支持功能**:
+- ✅ Windows 离线安装
+- ✅ 预编译依赖包
+- ✅ 断点续传
+- ✅ 完整日志
 
 ## 🔧 技术栈
 

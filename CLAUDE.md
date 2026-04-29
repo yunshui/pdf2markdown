@@ -9,7 +9,7 @@
 | 项目名称 | PDF to Markdown Converter |
 | 版本 | 1.0.0 |
 | 状态 | ✅ 生产就绪 |
-| 最后更新 | 2026-04-24 |
+| 最后更新 | 2026-04-29 |
 | 许可证 | MIT |
 
 ## 🎯 核心功能
@@ -20,6 +20,9 @@
 - ⚙️ 灵活配置管理
 - 🎯 格式保持
 - 🔍 页面摘要生成
+- 💾 断点续传
+- 🚀 Windows离线安装支持
+- 🔧 OpenClaw技能集成
 
 ## 📚 文档导航
 
@@ -44,7 +47,6 @@
 
 ```
 pdf2markdown/
-├── bin/                        # 可执行文件
 ├── conf/                       # 配置文件
 │   └── setting.json            # 配置文件
 ├── docs/                       # 详细文档目录
@@ -54,6 +56,13 @@ pdf2markdown/
 │   ├── workflow.md             # 流程文档
 │   ├── lessons-learned.md      # 经验教训
 │   └── progress.md             # 项目进度
+├── skills/                     # OpenClaw技能目录
+│   └── pdf2markdown/           # PDF转Markdown技能
+│       ├── conf/               # 技能配置
+│       ├── packages-windows/   # Windows离线依赖包
+│       ├── pdf2md.py           # 技能入口
+│       ├── src/                # 技能源代码
+│       └── install-offline.bat # Windows离线安装脚本
 ├── logs/                       # 日志目录（按天）
 ├── output/                     # 输出目录
 ├── src/                        # 源代码
@@ -63,7 +72,8 @@ pdf2markdown/
 │   ├── logger.py               # 日志系统
 │   ├── pdf_processor.py        # PDF处理
 │   ├── model_client.py         # 模型客户端
-│   └── converter.py            # 转换逻辑
+│   ├── converter.py            # 转换逻辑
+│   └── state_manager.py        # 状态管理
 ├── tests/                      # 测试代码
 ├── CLAUDE.md                   # 本文档
 ├── pdf2md.py                   # 主入口脚本
@@ -278,6 +288,50 @@ MIT License
 - Issues: [GitHub Issues](https://github.com/your-repo/issues)
 - Email: your-email@example.com
 
+## 🔌 OpenClaw 技能
+
+项目包含完整的 OpenClaw 技能，可在 Windows 环境中离线使用。
+
+### 技能位置
+
+```
+skills/pdf2markdown/
+├── pdf2md.py                   # 技能入口
+├── conf/setting.json           # 配置文件
+├── install-offline.bat         # Windows离线安装脚本
+├── install-offline.md          # 离线安装文档
+├── packages-windows/           # Windows依赖包
+└── src/                        # 源代码
+```
+
+### 在线安装
+
+```bash
+# 进入技能目录
+cd skills/pdf2markdown
+
+# 设置API密钥
+export PDF2MD_API_KEY="your-api-key"
+
+# 运行转换
+python pdf2md.py document.pdf
+```
+
+### Windows 离线安装
+
+```cmd
+# 进入技能目录
+cd skills\pdf2markdown
+
+# 运行离线安装
+install-offline.bat
+
+# 使用技能
+python pdf2md.py document.pdf --api-key YOUR_API_KEY
+```
+
+详细信息请参考 `skills/pdf2markdown/install-offline.md`
+
 ## 📝 更新日志
 
 ### v1.0.0 (2026-04-24)
@@ -286,6 +340,13 @@ MIT License
 - ✅ 完善的日志系统
 - ✅ 重试机制和超时控制
 - ✅ 完整的文档体系
+
+### v1.0.1 (2026-04-29)
+- 🚀 添加 OpenClaw 技能支持
+- 🔧 添加 Windows 离线安装功能
+- 💾 添加断点续传功能
+- 📦 包含 Windows 离线依赖包
+- 📄 更新项目文档
 
 ---
 
