@@ -14,7 +14,7 @@ class Config:
             "name": "qwen3.5-27b",
             "api_url": "",
             "api_key": "",
-            "timeout": 120
+            "timeout": 200
         },
         "conversion": {
             "max_retries": 3,
@@ -146,7 +146,7 @@ class Config:
     @property
     def timeout(self) -> int:
         """Get timeout in seconds."""
-        return self.get('model.timeout', 60)
+        return self.get('model.timeout', 200)
 
     @property
     def max_retries(self) -> int:

@@ -40,7 +40,7 @@ python pdf2md.py <PDF文件路径>
 |------|------|
 | `--validate-api` | 验证 API 连接 |
 | `--max-retries N` | 最大重试次数（默认 3） |
-| `--timeout N` | 请求超时秒数（默认 120） |
+| `--timeout N` | 请求超时秒数（默认 200） |
 | `--output-dir DIR` | 自定义输出目录 |
 | `--resume` | 从上次中断处恢复 |
 | `--reset-state` | 重置状态重新开始 |
@@ -98,7 +98,7 @@ output/
     "name": "qwen3.5-plus",
     "api_url": "https://coding.dashscope.aliyuncs.com/v1/chat/completions",
     "api_key": "your-api-key",
-    "timeout": 120
+    "timeout": 200
   },
   "conversion": {
     "max_retries": 3,

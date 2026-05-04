@@ -163,7 +163,7 @@ You can try converting this page separately or increasing the timeout setting.
 ```json
 {
   "model": {
-    "timeout": 120
+    "timeout": 200
   }
 }
 ```
@@ -182,7 +182,7 @@ python3 pdf2md.py document.pdf --timeout 180
 | `--resume` | 从上次中断处恢复 | false |
 | `--reset-state` | 重置状态重新开始 | false |
 | `--show-progress` | 显示当前进度（不执行转换） | false |
-| `--timeout` | 请求超时时间（秒） | 120 |
+| `--timeout` | 请求超时时间（秒） | 200 |
 
 ---
 
@@ -308,7 +308,7 @@ Test 3: Project Structure
     "name": "qwen3.5-plus",
     "api_url": "https://coding.dashscope.aliyuncs.com/v1/chat/completions",
     "api_key": "your-api-key-here",  // 已从提交中移除
-    "timeout": 120  // 从60秒增加到120秒
+    "timeout": 200  // 从60秒增加到200秒
   },
   "conversion": {
     "max_retries": 3,
@@ -509,7 +509,7 @@ pdf2markdown/
 3. **网络要求**: 需要稳定的网络连接访问API
 4. **内容限制**: 受模型token限制，单页内容过多可能需要分批处理
 5. **串行处理**: 当前为串行处理，尚未实现并行优化
-6. **超时设置**: 120秒超时可能仍不满足极复杂页面需求
+6. **超时设置**: 200秒超时可能仍不满足极复杂页面需求
 
 ---
 

@@ -90,7 +90,7 @@ python3 pdf2md.py document.pdf --output-dir ./markdown_output
 | `--model` | 模型名称 | 配置文件中的值 |
 | `--api-url` | API端点URL | 配置文件中的值 |
 | `--api-key` | API密钥 | 配置文件中的值 |
-| `--timeout` | 请求超时时间（秒） | 120 |
+| `--timeout` | 请求超时时间（秒） | 200 |
 | `--max-retries` | 最大重试次数 | 3 |
 | `--single-page-prompt` | 单页转换提示词 | 配置文件中的值 |
 | `--multi-page-summary-prompt` | 多页摘要提示词 | 配置文件中的值 |
@@ -344,7 +344,7 @@ python3 pdf2md.py test.pdf --validate-api
 **解决**:
 ```bash
 # 增加超时时间
-python3 pdf2md.py document.pdf --timeout 120
+python3 pdf2md.py document.pdf --timeout 200
 
 # 降低DPI以减少图片大小（需要修改代码）
 ```

@@ -87,7 +87,7 @@ python3 pdf2md.py document.pdf --output-dir ./markdown_output
 | `--model` | Model name | Config value |
 | `--api-url` | API endpoint URL | Config value |
 | `--api-key` | API key | Config value |
-| `--timeout` | Request timeout (seconds) | 120 |
+| `--timeout` | Request timeout (seconds) | 200 |
 | `--max-retries` | Max retry count | Config value |
 | `--single-page-prompt` | Single page prompt | Config value |
 | `--multi-page-summary-prompt` | Multi-page summary prompt | Config value |
@@ -289,7 +289,7 @@ python3 pdf2md.py test.pdf --validate-api
 **Solution**:
 ```bash
 # Increase timeout
-python3 pdf2md.py document.pdf --timeout 120
+python3 pdf2md.py document.pdf --timeout 200
 
 # Reduce DPI to decrease image size (requires code modification)
 ```
