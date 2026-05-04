@@ -3,7 +3,7 @@
     "name": "qwen3.5-plus",
     "api_url": "https://coding.dashscope.aliyuncs.com/v1/chat/completions",
     "api_key": "your-api-key-here",
-    "timeout": 120
+    "timeout": 200
   },
   "conversion": {
     "max_retries": 3,
